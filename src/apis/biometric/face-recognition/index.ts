@@ -16,24 +16,19 @@ export class BiometricVerificationService extends BaseSDK {
 
   compareUserFace(
     data: Required<
-      | Pick<faceComparisonParams, 'image_one'>
-      | Pick<faceComparisonParams, 'image_two'>
-    >
+      Pick<faceComparisonParams, 'image_one'> | Pick<faceComparisonParams, 'image_two'>
+    >,
   ) {
     return this.post(VERIFY_BIOMETRIC_FACE_COMPARISON_ENDPOINT, data);
   }
 
   enrollUsersWithFace(
-    data: Required<
-      Pick<biometricFaceParams, 'face_image' | 'first_name' | 'last_name'>
-    >
+    data: Required<Pick<biometricFaceParams, 'face_image' | 'first_name' | 'last_name'>>,
   ) {
     return this.post(VERIFY_BIOMETRIC_FACE_ENROLLMENT_ENDPOINT, data);
   }
 
-  checkUserLivenessWithFace(
-    data: Required<Pick<biometricFaceParams, 'image'>>
-  ) {
+  checkUserLivenessWithFace(data: Required<Pick<biometricFaceParams, 'image'>>) {
     return this.post(VERIFY_BIOMETRIC_FACE_LIVELINESS_ENDPOINT, data);
   }
 

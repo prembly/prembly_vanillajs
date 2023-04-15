@@ -6,13 +6,11 @@ export const PREMBLY_SDK_TEST_APIKEY = 'https://sandbox.myidentitypass.com';
 
 export const PREMBLY_SDK_TEST_APP_ID = 'https://sandbox.myidentitypass.com';
 
-export const PREMBLY_SDK_API_VERSION_1 =
-  'api/v1/biometrics/merchant/data/verification';
+export const PREMBLY_SDK_API_VERSION_1 = 'api/v1/biometrics/merchant/data/verification';
 
 export const PREMBLY_SDK_API_V2_PREFIX = 'api/v2/biometrics/merchant';
 
-export const PREMBLY_SDK_API_VERSION_2 =
-  'api/v2/biometrics/merchant/data/verification';
+export const PREMBLY_SDK_API_VERSION_2 = 'api/v2/biometrics/merchant/data/verification';
 
 export const PREMBLY_SDK_RADAR_ENDPOINT =
   'https://radarapi.myidentitypass.com/intelligence/complete-profile-check';
@@ -49,13 +47,11 @@ export const VERIFY_VIN_CAR_CHASIS_ENDPOINT = `/${PREMBLY_SDK_API_VERSION_2}/veh
 
 export const VERIFY_INTERPOL_BAN_LIST_ENDPOINT = `${PREMBLY_SDK_API_V2_PREFIX}/data/ban_list/search`;
 
-export const GET_WALLET_BALANCE_ENDPOINT =
-  'api/v1/biometrics/merchant/data/wallet/balance';
+export const GET_WALLET_BALANCE_ENDPOINT = 'api/v1/biometrics/merchant/data/wallet/balance';
 
 export const GET_VERIFICATION_STATUS_ENDPOINT = `${PREMBLY_SDK_API_VERSION_2}/status`;
 
-export const GET_ALL_VERIFICATION_ENDPOINT =
-  'api/v2/biometrics/api/endpoint/get';
+export const GET_ALL_VERIFICATION_ENDPOINT = 'api/v2/biometrics/api/endpoint/get';
 
 export const GET_ALL_BANK_CODES_ENDPOINT = `/${PREMBLY_SDK_API_VERSION_2}/bank_code`;
 

@@ -91,9 +91,7 @@ export abstract class BaseSDK {
 
   protected radarPost<T>(data: T): Promise<AxiosResponse<T>> {
     const sanitizedData = sanitizeInputFields(data as indexSignatureBaseParams);
-    return processApi<T>(() =>
-      this.radarApiClient.post(PREMBLY_SDK_RADAR_ENDPOINT, sanitizedData)
-    );
+    return processApi<T>(() => this.radarApiClient.post(PREMBLY_SDK_RADAR_ENDPOINT, sanitizedData));
   }
 
   /**

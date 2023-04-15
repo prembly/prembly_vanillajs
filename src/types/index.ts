@@ -18,10 +18,7 @@ export type radarParams = Required<
 
 export interface otherVerificationsParams
   extends Partial<
-    Pick<
-      indexSignatureBaseParams,
-      'image' | 'number' | 'customer_name' | 'customer_reference'
-    >
+    Pick<indexSignatureBaseParams, 'image' | 'number' | 'customer_name' | 'customer_reference'>
   > {
   company_number: string | number;
   company_name: string;
@@ -37,9 +34,7 @@ export interface interpolBanListParams {
 }
 
 export interface biometricFaceParams
-  extends Partial<
-    Pick<indexSignatureBaseParams, 'image' | 'first_name' | 'last_name'>
-  > {
+  extends Partial<Pick<indexSignatureBaseParams, 'image' | 'first_name' | 'last_name'>> {
   image_one: string;
   image_two: string;
   face_image: string;
@@ -55,10 +50,7 @@ export interface faceComparisonParams
   extends Partial<Pick<biometricFaceParams, 'image_one' | 'image_two'>> {}
 
 export interface bankAcctParams
-  extends Pick<
-    indexSignatureBaseParams,
-    'number' | 'customer_name' | 'customer_reference'
-  > {
+  extends Pick<indexSignatureBaseParams, 'number' | 'customer_name' | 'customer_reference'> {
   bank_code: number;
 }
 
@@ -72,12 +64,7 @@ export interface cacParams extends Pick<indexSignatureBaseParams, 'rc_number'> {
 export interface creditBureauParams
   extends Pick<
     indexSignatureBaseParams,
-    | 'first_name'
-    | 'dob'
-    | 'customer_reference'
-    | 'customer_name'
-    | 'number'
-    | 'rc_number'
+    'first_name' | 'dob' | 'customer_reference' | 'customer_name' | 'number' | 'rc_number'
   > {
   phone_number: string;
   mode: 'ID' | 'BIO';
@@ -87,16 +74,10 @@ export interface intlPassPortParams
   extends Pick<indexSignatureBaseParams, 'last_name' | 'number' | 'image'> {}
 
 export interface stampDutyParams
-  extends Pick<
-    indexSignatureBaseParams,
-    'customer_reference' | 'customer_name' | 'number'
-  > {}
+  extends Pick<indexSignatureBaseParams, 'customer_reference' | 'customer_name' | 'number'> {}
 
 export interface votersCardParams
-  extends Pick<
-    indexSignatureBaseParams,
-    'number' | 'last_name' | 'image' | 'first_name' | 'dob'
-  > {
+  extends Pick<indexSignatureBaseParams, 'number' | 'last_name' | 'image' | 'first_name' | 'dob'> {
   state: string;
   lga: string;
 }
@@ -114,10 +95,7 @@ export interface vehiclePlateNoParams {
 }
 
 export interface ugBusParams
-  extends Pick<
-    indexSignatureBaseParams,
-    'customer_name' | 'customer_reference'
-  > {
+  extends Pick<indexSignatureBaseParams, 'customer_name' | 'customer_reference'> {
   reservation_number: string;
 }
 
@@ -125,13 +103,11 @@ export interface saBusParams extends Omit<ugBusParams, 'reservation_number'> {
   reg_number: string;
 }
 
-export interface ghVotersCardParams
-  extends Pick<indexSignatureBaseParams, 'number'> {
+export interface ghVotersCardParams extends Pick<indexSignatureBaseParams, 'number'> {
   type: 'OLD' | 'MAIN';
 }
 
-export interface kyNationalIdentityParams
-  extends Pick<indexSignatureBaseParams, 'dob' | 'number'> {
+export interface kyNationalIdentityParams extends Pick<indexSignatureBaseParams, 'dob' | 'number'> {
   firstname: string;
   lastname: string;
   nationalid: string;

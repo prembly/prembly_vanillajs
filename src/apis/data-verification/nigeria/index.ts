@@ -85,31 +85,25 @@ export class NgVerificationService extends BaseSDK {
   }
 
   creditBureauConsumerBasic(
-    datas: Omit<creditBureauParams, 'phone_number' | 'first_name' | 'rc_number'>
+    datas: Omit<creditBureauParams, 'phone_number' | 'first_name' | 'rc_number'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_CONSUMER_BASIC_ENDPOINT, datas);
   }
 
   creditBureauConsumerAdvance(
-    datas: Omit<creditBureauParams, 'phone_number' | 'first_name' | 'rc_number'>
+    datas: Omit<creditBureauParams, 'phone_number' | 'first_name' | 'rc_number'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_CONSUMER_FULL_ENDPOINT, datas);
   }
 
   creditBureauComBasic(
-    datas: Pick<
-      creditBureauParams,
-      'rc_number' | 'customer_name' | 'customer_reference'
-    >
+    datas: Pick<creditBureauParams, 'rc_number' | 'customer_name' | 'customer_reference'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_BUSINESS_BASIC_ENDPOINT, datas);
   }
 
   creditBureauComAdvance(
-    datas: Pick<
-      creditBureauParams,
-      'rc_number' | 'customer_name' | 'customer_reference'
-    >
+    datas: Pick<creditBureauParams, 'rc_number' | 'customer_name' | 'customer_reference'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_BUSINESS_FULL_ENDPOINT, datas);
   }
@@ -130,9 +124,7 @@ export class NgVerificationService extends BaseSDK {
     return this.post(VERIFY_DRIVERS_LICENSE_IMAGE_ENDPOINT, datas);
   }
 
-  driversLicenseFaceID(
-    datas: Omit<indexSignatureBaseParams, 'first_name' | 'last_name'>
-  ) {
+  driversLicenseFaceID(datas: Omit<indexSignatureBaseParams, 'first_name' | 'last_name'>) {
     return this.post(VERIFY_DRIVERS_LICENSE_FACE_ID_ENDPOINT, datas);
   }
 
@@ -198,10 +190,7 @@ export class NgVerificationService extends BaseSDK {
   }
 
   creditBureauMashup(
-    datas: Pick<
-      creditBureauParams,
-      'number' | 'customer_name' | 'customer_reference'
-    >
+    datas: Pick<creditBureauParams, 'number' | 'customer_name' | 'customer_reference'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_MASHUP_ENDPOINT, datas);
   }

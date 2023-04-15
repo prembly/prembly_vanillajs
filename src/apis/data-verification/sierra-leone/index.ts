@@ -11,9 +11,7 @@ export class SierraLeoneVerificationService extends BaseSDK {
     const { search_mode, dob, firstname, lastname, number } = data;
 
     const newData: slDriversLicenseParams =
-      search_mode === 'ID'
-        ? { search_mode, number }
-        : { search_mode, firstname, lastname, dob };
+      search_mode === 'ID' ? { search_mode, number } : { search_mode, firstname, lastname, dob };
 
     return this.post(VERIFY_DRIVERS_LICENSE_SIERRA_LEONE_ENDPOINT, newData);
   }

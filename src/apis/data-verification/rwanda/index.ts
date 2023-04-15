@@ -1,8 +1,5 @@
 import { indexSignatureBaseParams } from '@/src/types';
-import {
-  VERIFY_NID_RWANDA_ENDPOINT,
-  VERIFY_PASSPORT_RWANDA_ENDPOINT,
-} from '@/src/utils/consts';
+import { VERIFY_NID_RWANDA_ENDPOINT, VERIFY_PASSPORT_RWANDA_ENDPOINT } from '@/src/utils/consts';
 import { BaseSDK } from '../../base-config';
 
 export class RwandaVerificationService extends BaseSDK {

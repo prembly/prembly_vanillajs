@@ -12,15 +12,14 @@ import axios, { AxiosPromise, AxiosResponse } from 'axios';
 
 export function applyMixins<T extends new (...args: any[]) => any>(
   derivedCtor: T,
-  constructors: (new (...args: any[]) => any)[]
+  constructors: (new (...args: any[]) => any)[],
 ) {
   constructors.forEach((baseCtor) => {
     Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
       Object.defineProperty(
         derivedCtor.prototype,
         name,
-        Object.getOwnPropertyDescriptor(baseCtor.prototype, name) ||
-          Object.create(null)
+        Object.getOwnPropertyDescriptor(baseCtor.prototype, name) || Object.create(null),
       );
     });
   });
@@ -82,7 +81,7 @@ export class SdkError extends Error {
       message: string;
       error: any;
       errorDetail: unknown;
-    }>
+    }>,
   ) {
     super(params.message); // call the Error class constructor with the message
 
@@ -92,9 +91,9 @@ export class SdkError extends Error {
   }
 }
 
-export function sanitizeInputFields<
-  T extends { [key: string]: string | number | undefined }
->(obj: T): T {
+export function sanitizeInputFields<T extends { [key: string]: string | number | undefined }>(
+  obj: T,
+): T {
   // Create an empty object with the same type as the input object
   const sanitizedObj = {} as T;
 
@@ -112,10 +111,7 @@ export function sanitizeInputFields<
       // The 'as T[typeof key]' part of this line is a type assertion that tells TypeScript that the type of the value is the same as the type of the property.
     } else if (typeof value === 'string' && key !== 'image') {
       // The following line sanitizes the string by removing all characters that are not numbers, letters, underscores, or dash
-      sanitizedObj[key] = value.replace(
-        /[^0-9a-zA-Z _-]/g,
-        ''
-      ) as T[typeof key];
+      sanitizedObj[key] = value.replace(/[^0-9a-zA-Z _-]/g, '') as T[typeof key];
       // The 'as T[typeof key]' part of this line is a type assertion that tells TypeScript that the type of the sanitized value is the same as the type of the property.
     } else {
       // If the value is of an unsupported type, throw an error

@@ -1,8 +1,5 @@
 import PremblyVerificationService, { DataVerificationService } from '..';
-import {
-  NIN_BASE_64_TEST_IMAGE,
-  VERIFY_DOC_IMG_64_TST_IMG,
-} from '../utils/consts';
+import { NIN_BASE_64_TEST_IMAGE, VERIFY_DOC_IMG_64_TST_IMG } from '../utils/consts';
 
 describe('Errors are handled', () => {
   const config = {
@@ -22,10 +19,7 @@ describe('Errors are handled', () => {
           number: 88888888,
         });
       } catch (err) {
-        expect(err).toHaveProperty(
-          'message',
-          'An AxiosError occurred: Bad Request'
-        );
+        expect(err).toHaveProperty('message', 'An AxiosError occurred: Bad Request');
         expect(err).toHaveProperty('code', badRequestCode);
       }
     });
@@ -182,16 +176,14 @@ describe('Errors are handled', () => {
       const res = await verifyServices.ngService.driversLicenseFaceID({
         number: 'AAD23208212298',
         dob: '1999-12-21',
-        image:
-          'https://res.cloudinary.com/dh3i1wodq/image/upload/v1675417496/cbimage_3_drqdoc.jpg',
+        image: 'https://res.cloudinary.com/dh3i1wodq/image/upload/v1675417496/cbimage_3_drqdoc.jpg',
       });
       expect(res).toHaveProperty('status', successCode);
       expect(res.data).toHaveProperty('response_code', '00');
     });
     it('verify Nigeria nin with image', async () => {
       const res = await verifyServices.ngService.ninWithImage({
-        image:
-          'https://asset.cloudinary.com/dh3i1wodq/089761016db6dab086ca450bf2465898',
+        image: 'https://asset.cloudinary.com/dh3i1wodq/089761016db6dab086ca450bf2465898',
       });
       expect(res).toHaveProperty('status', successCode);
       expect(res.data).toHaveProperty('response_code', '00');
@@ -206,8 +198,7 @@ describe('Errors are handled', () => {
     it('verify Nigeria nin with face', async () => {
       const res = await verifyServices.ngService.ninWithFace({
         number: 12345678909,
-        image:
-          'https://res.cloudinary.com/dh3i1wodq/image/upload/v1675417496/cbimage_3_drqdoc.jpg',
+        image: 'https://res.cloudinary.com/dh3i1wodq/image/upload/v1675417496/cbimage_3_drqdoc.jpg',
       });
       expect(res).toHaveProperty('status', successCode);
       expect(res.data).toHaveProperty('response_code', '00');
@@ -341,11 +332,10 @@ describe('Errors are handled', () => {
 
   describe('Verifying Biometric APIs are working', () => {
     it('verify face liveliness is working', async () => {
-      const res =
-        await premblyClient.biometricService.checkUserLivenessWithFace({
-          image:
-            'https://res.cloudinary.com/dh3i1wodq/image/upload/v1677955197/face_image_tkmmwz.jpg',
-        });
+      const res = await premblyClient.biometricService.checkUserLivenessWithFace({
+        image:
+          'https://res.cloudinary.com/dh3i1wodq/image/upload/v1677955197/face_image_tkmmwz.jpg',
+      });
       expect(res).toHaveProperty('status', successCode);
     });
     it('verify user with face id is working', async () => {

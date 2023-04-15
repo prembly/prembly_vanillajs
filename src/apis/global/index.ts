@@ -14,21 +14,14 @@ export class GlobalVerificationService extends BaseSDK {
     data: Required<
       Pick<
         otherVerificationsParams,
-        | 'company_number'
-        | 'country_code'
-        | 'customer_name'
-        | 'customer_reference'
+        'company_number' | 'country_code' | 'customer_name' | 'customer_reference'
       >
-    >
+    >,
   ) {
     return this.post(VERIFY_GLOBAL_BUSINESS_ENDPOINT, data);
   }
 
-  searchBusiness(
-    data: Required<
-      Pick<otherVerificationsParams, 'company_name' | 'country_code'>
-    >
-  ) {
+  searchBusiness(data: Required<Pick<otherVerificationsParams, 'company_name' | 'country_code'>>) {
     return this.post(VERIFY_GLOBAL_BUSINESS_SEARCH_ENDPOINT, data);
   }
 
