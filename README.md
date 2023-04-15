@@ -1,6 +1,6 @@
-# Prembly Identitypass JavaScript SDK
+# Prembly_vanillajs Identitypass SDK
 
-The Prembly Identitypass SDK is a library that allows you to easily integrate verification services into your nodeJS app. The SDK is based on the Prembly Identitypass API, which provides a range of verification services, including data verification, identity verification, document verification, biometric verification, radar verification and other verification services.
+The Prembly Identitypass SDK is a library that allows you to easily integrate verification services into your app. The SDK is based on the Prembly Identitypass API, which provides a range of verification services, including data verification, identity verification, document verification, biometric verification, radar verification and other verification services.
 
 ## Features
 
