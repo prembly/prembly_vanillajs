@@ -112,6 +112,108 @@ premblyDataVerifier.ngService.bvn({ number: XXXX XXXX XXXX XXXX }).then((res) =>
 | 7   | Uganda       | ugService     |
 | 8   | Mashup       | mashupService |
 
+### Methods available in each country are:
+
+#### Nigeria
+
+Available methods are:
+
+| SN  | METHOD NAME                 | DESCRIPTION && REQUIRED FIELD                                                                                                                                                                            |
+| --- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------- | --- | -------------------------- |
+| 1   | cac                         | _Verify a business using rc_number and company_type_                                                                                                                                                     |
+| 2   | cacWithName                 | _Verify a business using company_name_                                                                                                                                                                   |
+| 3   | cacAdvance                  | \_Verify a business using rc_number, company_name and company_type                                                                                                                                       |
+| 4   | bvn                         | _Verify a Bank Verification Number using number (BVN)_                                                                                                                                                   |
+| 5   | bvnAdvance                  | _Verify a Bank Verification Number using number (BVN) _                                                                                                                                                  |
+| 6   | bvnWithFace                 | _Verify a Bank Verification Number (BVN) using image and number_                                                                                                                                         |
+| 7   | phoneNo                     | _Verify a Phone Number using number (PHONE NUMBER)_                                                                                                                                                      |
+| 8   | bankCodes                   | _Get all banks code_                                                                                                                                                                                     |
+| 9   | bankAccount                 | _Verify bank account number using number(ACCT NO) and bank_code_                                                                                                                                         |
+| 10  | bankAcctComparism           | _Verify bank account number and compare name with customer name using number(ACCT NO), bank_code, customer_name and customer_reference_                                                                  |
+| 11  | bankAcctAdvance             | _Verify bank account number using number(ACCT NO) and bank_code _                                                                                                                                        |
+| 12  | votersCard                  | _Verify voters card using number(VOTERS CARD NO), first_name, last_name, lga, dob, state_                                                                                                                |
+| 13  | votersCardWithImage         | _Verify voters card ID image using image _                                                                                                                                                               |
+| 14  | driversLicense              | _Verify drivers license using dob(DATE OF BIRTH) and number(FRSC NO)_                                                                                                                                    |
+| 15  | basicDriversLicense         | _Verify drivers license using dob(DATE OF BIRTH), number(FRSC NO), first_name, and last_name :returns true or false_                                                                                     |
+| 16  | driversLicenseAdvance       | _Verify drivers license using dob(DATE OF BIRTH), number(FRSC NO), first_name, and last_name returning full info_                                                                                        |
+| 17  | driversLicenseImage         | _Verify drivers license ID image using image_                                                                                                                                                            |
+| 18  | driversLicenseFaceID        | _Verify drivers license with face validation using dob(DATE OF BIRTH), number(FRSC NO), and image_                                                                                                       |
+| 19  | intlPassportSync            | _Verify international passport using number(PASSPORT NO) and last_name_                                                                                                                                  |
+| 20  | intlPassportWithImg         | _Verify international passport using image_                                                                                                                                                              |
+| 21  | intlPassportWithFace        | _Verify international passport with face validation using number(PASSPORT NO), last_name, and image_                                                                                                     |
+| 22  | intlPassportAsync           | _Verify international passport in an asynchronous manner using number(PASSPORT NO) and last_name_                                                                                                        |
+| 23  | creditBureau                | _Get User Credit bureau statement using phone_number and first_name_                                                                                                                                     |
+| 24  | creditBureauConsumerBasic   | _Get basic credit details of a user using number or dob, customer_reference, customer_name and select MODE (if mode is ID, then number will be bvn or if mode is BIO then dob else the number and dob)_  |
+| 25  | creditBureauConsumerAdvance | _Get advance credit details of a user using number or dob, customer_reference, customer_name and select MODE (if mode is ID, then number will be bvn or if mode is BIO then dob else the number and dob_ |
+| 26  | creditBureauComBasic        | _Get basic credit details of a business using rc_number, customer_reference, and customer_name)_                                                                                                         |
+| 27  | creditBureauComAdvance      | _Get advance credit details of a business using rc_number, customer_reference, and customer_name_                                                                                                        |
+| 28  | creditBureauMashup          | _Verify credit bureau statement of a user and returns data for two credit sources using customer_name, customer_reference and number(BVN)_                                                               |
+| 29  | nin                         | _Verify a National Identification Number(NIN) Slip using number(VNIN) or number_nin(RAW NIN)_                                                                                                            |
+| 30  | ninWithImage                | _Verify a National Identification Number(NIN) Slip using image_                                                                                                                                          |
+| 31  | ninWithFace                 | _Verify a National Identification Number(NIN) with user's image using image and number(NIN)_                                                                                                             |
+| 32  | stampDuty                   | _Verify a stamp duty reference number using number(STAMP DUTY NO), customer_name and customer_reference _                                                                                                |
+| 33  | vehiclePlateNo              | _Verify a vehicle number plate using vehicle_number _                                                                                                                                                    |
+| 34  | tin                         | \_Verify tax identification number using number(TIN                                                                                                                                                      | RC number | Phone number) select channel(TIN | CAC | Phone {defaults to TIN})\_ |
+
+#### Ghana
+
+Available methods are:
+
+| SN  | METHOD NAME    | DESCRIPTION && REQUIRED FIELD                                                                                                  |
+| --- | -------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| 1   | driversLicense | _Verify user drivers license using dob and number(LICENSE NO) _                                                                |
+| 2   | ssnit          | _Verify Social Security and National Insurance Trust Number using number(SSNIT NO)_                                            |
+| 3   | ssnitWithFace  | _Verify Social Security and National Insurance Trust Number With Face Validation using number(SSNIT NO) and image(face image)_ |
+| 4   | votersCard     | \_Verify voters card using number(VOTER'S CARD NO) and type (MAIN                                                              | OLD)\_ |
+| 5   | intlPassport   | _Verify user international passport using number(PASSPORT NO)_                                                                 |
+
+#### Kenya
+
+Available methods are:
+
+| SN  | METHOD NAME      | DESCRIPTION && REQUIRED FIELD                                                                |
+| --- | ---------------- | -------------------------------------------------------------------------------------------- |
+| 1   | driversLicense   | _Verify user drivers license using number(LICENSE NO), customer_name and customer_reference_ |
+| 2   | passport         | _Verify user passport using number(PASSPORT NO), customer_name and customer_reference_       |
+| 3   | serialNo         | _Verify user serial number_                                                                  |
+| 4   | nin              | _Verify user national identity number_                                                       |
+| 5   | nationalIdentity | _Verify and authenticate foreign resident_                                                   |
+
+#### Sierra Leone
+
+Available methods are:
+
+| SN  | METHOD NAME    | DESCRIPTION && REQUIRED FIELD |
+| --- | -------------- | ----------------------------- |
+| 1   | driversLicense | _Verify user drivers license_ |
+| 2   | votersCard     | _Verify voters card_          |
+
+#### South Africa
+
+Available methods are:
+
+| SN  | METHOD NAME      | DESCRIPTION && REQUIRED FIELD  |
+| --- | ---------------- | ------------------------------ |
+| 1   | nationalIdentity | _Verify user national id card_ |
+| 2   | business         | _Verify a business_            |
+
+#### Rwanda
+
+Available methods are:
+
+| SN  | METHOD NAME | DESCRIPTION && REQUIRED FIELD                     |
+| --- | ----------- | ------------------------------------------------- |
+| 1   | passport    | _Verify Rwandan passport_                         |
+| 2   | nid         | _Verify national identity card issued to Rwandan_ |
+
+#### Uganda
+
+Available methods are:
+
+| SN  | METHOD NAME | DESCRIPTION && REQUIRED FIELD |
+| --- | ----------- | ----------------------------- |
+| 1   | business    | _Verify a business_           |
+
 ### Other verification services
 
 Each verification service can be accessed by their acronym as follow:
