@@ -6,7 +6,6 @@ import {
 import { BaseSDK } from '../../base-config';
 
 export class SierraLeoneVerificationService extends BaseSDK {
-  //   These APi are not tested yet
   driversLicense(data: slDriversLicenseParams) {
     const { search_mode, dob, firstname, lastname, number } = data;
 

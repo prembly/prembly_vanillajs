@@ -53,6 +53,9 @@ export class NgVerificationService extends BaseSDK {
   bankCodes() {
     return this.get(GET_ALL_BANK_CODES_ENDPOINT);
   }
+  bankAcctBasic(datas: Pick<bankAcctParams, 'number' | 'bank_code'>) {
+    return this.post(VERIFY_BANK_ACCOUNT_ENDPOINT, datas);
+  }
   bankAcctAdvance(datas: Pick<bankAcctParams, 'number' | 'bank_code'>) {
     return this.post(VERIFY_BANK_ACCOUNT_ADVANCE_ENDPOINT, datas);
   }
@@ -64,9 +67,6 @@ export class NgVerificationService extends BaseSDK {
   }
   bvnAdvance(datas: Pick<indexSignatureBaseParams, 'number'>) {
     return this.post(VERIFY_BVN_ADVANCE_ENDPOINT, datas);
-  }
-  bankAcctBasic(datas: Pick<bankAcctParams, 'number' | 'bank_code'>) {
-    return this.post(VERIFY_BANK_ACCOUNT_ENDPOINT, datas);
   }
 
   bankAcctComparism(datas: bankAcctParams) {
@@ -83,25 +83,21 @@ export class NgVerificationService extends BaseSDK {
   creditBureau(datas: Pick<creditBureauParams, 'phone_number' | 'first_name'>) {
     return this.post(VERIFY_CREDIT_BUREAU_ENDPOINT, datas);
   }
-
   creditBureauConsumerBasic(
     datas: Omit<creditBureauParams, 'phone_number' | 'first_name' | 'rc_number'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_CONSUMER_BASIC_ENDPOINT, datas);
   }
-
   creditBureauConsumerAdvance(
     datas: Omit<creditBureauParams, 'phone_number' | 'first_name' | 'rc_number'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_CONSUMER_FULL_ENDPOINT, datas);
   }
-
   creditBureauComBasic(
     datas: Pick<creditBureauParams, 'rc_number' | 'customer_name' | 'customer_reference'>,
   ) {
     return this.post(VERIFY_CREDIT_BUREAU_BUSINESS_BASIC_ENDPOINT, datas);
   }
-
   creditBureauComAdvance(
     datas: Pick<creditBureauParams, 'rc_number' | 'customer_name' | 'customer_reference'>,
   ) {
@@ -179,8 +175,6 @@ export class NgVerificationService extends BaseSDK {
   intlPassportWithImg(datas: Pick<intlPassPortParams, 'image'>) {
     return this.post(VERIFY_INTL_PASSPORT_WITH_IMAGE_ENDPOINT, datas);
   }
-
-  //newly added but not tested
 
   intlPassportAsync(datas: Omit<intlPassPortParams, 'image'>) {
     return this.post(VERIFY_INTL_PASSPORT_ASYNC_ENDPOINT, datas);

@@ -9,7 +9,6 @@ import {
 } from '@/src/utils/consts';
 
 export class KenyaVerificationService extends BaseSDK {
-  //These APi are not tested yet
   nationalIdentity(
     datas: Omit<kyNationalIdentityParams, 'number' | 'customer_name' | 'customer_reference'>,
   ) {
