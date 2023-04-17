@@ -118,8 +118,8 @@ premblyDataVerifier.ngService.bvn({ number: XXXX XXXX XXXX XXXX }).then((res) =>
 
 Available methods are:
 
-| SN  | METHOD NAME                 | DESCRIPTION && REQUIRED FIELD                                                                                                                                                                            |
-| --- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------- | --- | -------------------------- |
+| SN  | METHOD NAME                 | DESCRIPTION && REQUIRED FIELD |                                                                                
+| --- | ------------                | ----------------------------  |
 | 1   | cac                         | _Verify a business using rc_number and company_type_                                                                                                                                                     |
 | 2   | cacWithName                 | _Verify a business using company_name_                                                                                                                                                                   |
 | 3   | cacAdvance                  | \_Verify a business using rc_number, company_name and company_type                                                                                                                                       |
@@ -159,8 +159,8 @@ Available methods are:
 
 Available methods are:
 
-| SN  | METHOD NAME    | DESCRIPTION && REQUIRED FIELD                                                                                                  |
-| --- | -------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| SN  | METHOD NAME    | DESCRIPTION && REQUIRED FIELD|                                                                                               
+| --- | -------------- | ---------------------------  |
 | 1   | driversLicense | _Verify user drivers license using dob and number(LICENSE NO) _                                                                |
 | 2   | ssnit          | _Verify Social Security and National Insurance Trust Number using number(SSNIT NO)_                                            |
 | 3   | ssnitWithFace  | _Verify Social Security and National Insurance Trust Number With Face Validation using number(SSNIT NO) and image(face image)_ |
