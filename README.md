@@ -201,10 +201,10 @@ Available methods are:
 
 Available methods are:
 
-| SN  | METHOD NAME | DESCRIPTION && REQUIRED FIELD                     |
-| --- | ----------- | ------------------------------------------------- |
-| 1   | passport    | _Verify Rwandan passport_                         |
-| 2   | nid         | _Verify national identity card issued to Rwandan_ |
+| SN  | METHOD NAME      | DESCRIPTION && REQUIRED FIELD                     |
+| --- | ---------------- | ------------------------------------------------- |
+| 1   | passport         | _Verify Rwandan passport_                         |
+| 2   | nationalIdentity | _Verify national identity card issued to Rwandan_ |
 
 #### Uganda
 
@@ -223,3 +223,11 @@ Each verification service can be accessed by their acronym as follow:
 | 1   | Biometric | biometricService |
 | 2   | Document  | documentService  |
 | 3   | Global    | globalService    |
+
+## Author: [Abdulafeez(PragmaticAweds)](https://github.com/pragmaticAweds)
+
+Follow me on
+
+- Github [@pragmaticAweds](https://github.com/pragmaticAweds)
+- LinkedIn [@abdulafeez (pragmaticaweds) jimoh](https://www.linkedin.com/in/abdulafeez-pragmaticaweds-jimoh-a174ba1b3/)
+- Twitter [@pragmatic_aweds](https://twitter.com/pragmatic_aweds)
