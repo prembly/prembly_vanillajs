@@ -1,0 +1,25 @@
+name: CI
+
+# This workflow runs the CI process when changes are pushed to any branch.
+on:
+  push:
+    branches:
+      - '**' # Use a glob pattern to match all branches.
+
+jobs:
+  # Define a single job that builds and tests the code.
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the code from the repository.
+      - uses: actions/checkout@v3
+      # Set up the Node.js environment with the required version and dependencies.
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'yarn'
+      # Install the project dependencies using Yarn.
+      - run: yarn install --frozen-lockfile
+      # Run the CI script defined in the project.
+      - name: Run CI script
+        run: yarn run ci
