@@ -1,6 +1,6 @@
 {
   "name": "prembly-identitypass-js-sdk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Prembly identity javascript sdk",
   "private": false,
   "main": "./dist/index.js",
