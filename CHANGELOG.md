@@ -1,5 +1,11 @@
 # prembly-verify-sdk
 
+## 0.2.0
+
+### Minor Changes
+
+- 358d305: Setup sdk and liniting with format.
+
 ## 0.0.1
 
 ### Patch Changes
